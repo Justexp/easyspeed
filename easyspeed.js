@@ -8,9 +8,9 @@ var EasySpeed = function(var positionObj, var destinationObj, unitpersec, mspers
     this.distanceX = destinationObj.x - positionObj.x;
     this.distanceY = destinationObj.y - positionObj.y;
 
-    this.distance = Math.sqrt(distanceX*distanceX + distanceY*distanceY);
+    this.distance = Math.sqrt(this.distanceX*this.distanceX + this.distanceY*this.distanceY);
 
-    this.speed = (distance/unitpersec)*mspersec;
+    this.speed = (this.distance/unitpersec)*mspersec;
 
-    return speed;
+    return this.speed;
 }
